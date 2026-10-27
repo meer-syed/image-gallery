@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery with categories and a lightbox viewer.">
+  <title>ImageGallery — Discover Beautiful Images</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ImageGallery home">
+      <span class="brand-icon">▣</span>
+      <span>Image<span class="accent">Gallery</span></span>
+    </a>
+    <span class="header-note">EXPLORE · DISCOVER · ENJOY</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">YOUR VISUAL ESCAPE</p>
+      <h1>Beautiful Images, <span class="accent">One Gallery</span></h1>
+      <p class="subtitle">A collection of stunning moments from around the world.</p>
+    </section>
+
+    <nav class="filters" aria-label="Filter images by category">
+      <button class="filter-btn active" data-category="All">✦ <span>All</span></button>
+      <button class="filter-btn" data-category="Nature">♧ <span>Nature</span></button>
+      <button class="filter-btn" data-category="Cities">▦ <span>Cities</span></button>
+      <button class="filter-btn" data-category="Animals">♧ <span>Animals</span></button>
+      <button class="filter-btn" data-category="People">♙ <span>People</span></button>
+      <button class="filter-btn" data-category="Travel">✈ <span>Travel</span></button>
+    </nav>
+
+    <div class="gallery" id="gallery" aria-live="polite"></div>
+    <p class="gallery-count" id="galleryCount"></p>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close-btn" id="closeLightbox" aria-label="Close image viewer">×</button>
+    <button class="lightbox-nav prev-btn" id="prevImage" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+      <img id="lightboxImage" src="" alt="">
+      <figcaption class="lightbox-caption">
+        <div>
+          <p class="caption-category" id="lightboxCategory"></p>
+          <h2 id="lightboxTitle"></h2>
+          <p id="lightboxDescription"></p>
+        </div>
+        <button class="favorite-btn lightbox-favorite" id="lightboxFavorite" aria-label="Add to favorites">♡</button>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav next-btn" id="nextImage" aria-label="Next image">›</button>
+  </div>
+
+  <footer><p>Made for curious eyes <span class="accent">✦</span></p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
